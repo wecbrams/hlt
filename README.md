@@ -15,7 +15,7 @@ Deployed live on Vercel!
 
 **HealthSync** enables healthcare providers to:
 
-- Create and manage health programs (e.g., TB, Malaria, HIV).
+- Create and manage health programs.
 - Register new patients/clients easily.
 - Enroll clients into one or multiple health programs.
 - Search for clients by name or ID.
