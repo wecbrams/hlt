@@ -1,0 +1,35 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Program {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  enrollments Enrollment[]
+}
+
+model Client {
+  id        Int      @id @default(autoincrement())
+  name      String
+  age       Int
+  symptoms  String
+  createdAt DateTime @default(now())
+  enrollments Enrollment[]
+}
+
+model Enrollment {
+  id         Int      @id @default(autoincrement())
+  client     Client   @relation(fields: [clientId], references: [id])
+  clientId   Int
+  program    Program  @relation(fields: [programId], references: [id])
+  programId  Int
+  createdAt  DateTime @default(now())
+}
