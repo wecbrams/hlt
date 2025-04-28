@@ -1,8 +1,8 @@
 import { prisma } from '@/lib/prisma';
 import { NextRequest, NextResponse } from 'next/server';
-import type { NextApiRequestContext } from 'next';
+import type { RouteHandlerContext } from 'next';
 
-export async function GET(req: NextRequest, context: NextApiRequestContext) {
+export async function GET(req: NextRequest, context: RouteHandlerContext<{ id: string }>) {
   const { id } = context.params;
 
   if (!id) {
