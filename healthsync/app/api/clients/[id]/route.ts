@@ -1,7 +1,8 @@
 import { prisma } from '@/lib/prisma';
 import { NextRequest, NextResponse } from 'next/server';
+import type { NextApiRequestContext } from 'next';
 
-export async function GET(req: NextRequest, context: { params: { id: string } }) {
+export async function GET(req: NextRequest, context: NextApiRequestContext) {
   const { id } = context.params;
 
   if (!id) {
