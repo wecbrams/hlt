@@ -72,7 +72,7 @@ npm run dev
 
 ## 🌍 Live Deployment
 
-[🔗 Live Demo on Vercel](https://healthsync-pni5q11rp-wecbramgmailcoms-projects.vercel.app)
+[🔗 Live Demo on Vercel](https://healthsync-qj4ce6lz6-wecbramgmailcoms-projects.vercel.app)
 
 ---
 
